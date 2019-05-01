@@ -1,3 +1,28 @@
+@font-face {
+	font-family: 'Futura-Bold';
+	src: url('../fonts/Futura-Bold.eot');
+	src: url('../fonts/Futura-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Futura-Bold.svg#Futura-Bold') format('svg'),
+	url('../fonts/Futura-Bold.ttf') format('truetype'),
+	url('../fonts/Futura-Bold.woff') format('woff'),
+	url('../fonts/Futura-Bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaBT-Medium';
+	src: url('../fonts/FuturaBT-Medium.eot');
+	src: url('../fonts/FuturaBT-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/FuturaBT-Medium.svg#FuturaBT-Medium') format('svg'),
+	url('../fonts/FuturaBT-Medium.ttf') format('truetype'),
+	url('../fonts/FuturaBT-Medium.woff') format('woff'),
+	url('../fonts/FuturaBT-Medium.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -7,7 +32,7 @@
 
 
 body {
-	font-family: 
+	font-family: 'FuturaBT-Medium'; 
 	font-size: 16px;
 
 }
@@ -37,6 +62,7 @@ img {
 	transition: .4s all linear;
 	text-transform: uppercase;
 	color: #0B9EF5;
+	font-family: 'Futura-Bold';
 }
 .btn a:hover {
 	background: #0B9EF5;
@@ -68,6 +94,7 @@ img {
 header {
 	background: #044867;
 	height: 170px;
+	position: relative;
 }
 
 header .container {
@@ -95,14 +122,25 @@ header .menu ul li a {
 header .menu ul li a:hover {
 	color: #0B9EF5;
 }
+body header .btn-mobile {
+	display: none;	
+	}
 
 #banner {
 	height: 420px;
 	background: url('../img/banner.jpg') center center no-repeat;
-	
 }
 
+#banner .container{
+	display: flex;
+	height: 100%;
+	align-items: center;
 }
+
+#banner .textpng{
+	height: 382px;
+}
+
 #cta {
 	text-align: center;
 	padding: 70px 0;
@@ -288,6 +326,10 @@ footer p {
 		height: 300px;
 	}
 
+	#banner .textpng{
+		height: 250px;
+	}
+
 	#cta {
 		padding: 50px 0;
 	}
@@ -306,8 +348,12 @@ footer p {
 	.card .card-content {
 		padding: 20px 35px 30px;
 	}
-	.card .card-content h3, .card .card-content p {
-		font-size: 18px
+	.card .card-content h3 {
+		font-size: 18px;
+		font-family: 'Futura-Bold';
+	}
+	.card .card-content p {
+		font-size: 18px;
 	}
 }
 
@@ -340,6 +386,77 @@ footer p {
 }
 
 @media screen and (max-width: 992px) {
+    body header .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: #0B9EF5;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: right;
+        height: 280px;
+        opacity: 0.80;
+       /* visibility: hidden;
+        opacity: 0*/
+    }
+    body header .menu.active {
+        visibility: visible;
+        opacity: 1
+    }
+    body header .menu ul li {
+        display: block;
+        margin-right: 0;
+        margin-left: 0
+    }
+    body header .menu ul li a {
+        color: #fff;
+        padding: 22px;
+        font-size: 21px;
+        text-transform: uppercase
+    }
+
+	body header .btn-mobile {
+		display: block;
+	}
+
+
+	body header .btn-mobile span {
+		height: 4px;
+		width: 40px;
+		background: #ffffff;
+		display: block;
+		position: relative
+	}
+
+	body header .btn-mobile span:nth-child(2) {
+		margin-top: 8px;
+		margin-bottom: 8px
+	}
+
+	body header .btn-mobile.active span:first-child {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		top: 12px
+	}
+
+	body header .btn-mobile.active span:nth-child(2) {
+		visibility: hidden;
+		opacity: 0
+	}
+
+	body header .btn-mobile.active span:last-child {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		bottom: 12px
+	}
+
 	.container {
 		max-width: 90%;
 	}
