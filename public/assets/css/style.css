@@ -96,8 +96,10 @@ header .menu ul li a:hover {
 #banner {
 	height: 420px;
 	background: url('../img/banner.jpg') center center no-repeat;
+	
 }
 
+}
 #cta {
 	text-align: center;
 	padding: 70px 0;
@@ -343,10 +345,10 @@ footer p {
 @media screen and (max-width: 680px) {
 	
 	#banner {
-	height: 420px;
-	background: url('../img/Banner iPhone 2.png') center center no-repeat;
+		background: url('../img/Banner iPhone 2.jpg') center center no-repeat;
 
-}
+	}
+
 	.cards .card {
 		width: 100%;
 		max-width: 300px;
