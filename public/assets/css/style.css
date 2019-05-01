@@ -119,6 +119,7 @@ header .menu ul li a:hover {
 }
 #about .columns {
 	display: flex;
+	flex-wrap: wrap;
 }
 #about .columns .col {
 	flex: 1;
@@ -340,6 +341,12 @@ footer p {
 }
 
 @media screen and (max-width: 680px) {
+	
+	#banner {
+	height: 420px;
+	background: url('../img/Banner iPhone 2.png') center center no-repeat;
+
+}
 	.cards .card {
 		width: 100%;
 		max-width: 300px;
@@ -349,6 +356,7 @@ footer p {
 
 	footer .container {
 		flex-direction: column;
+		flex-wrap: wrap;
 	}
 	footer ul {
 		margin-top: 20px;
