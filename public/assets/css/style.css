@@ -5,7 +5,9 @@
 	text-decoration: none;
 }
 
+
 body {
+	font-family: 
 	font-size: 16px;
 
 }
@@ -346,7 +348,7 @@ footer p {
 @media screen and (max-width: 680px) {
 	
 	#banner {
-		background: url('../img/Banner iPhone 2.jpg') center center no-repeat;
+		background: url('../img/banneriphone2.jpg') center center no-repeat;
 
 	}
 
