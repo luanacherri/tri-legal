@@ -124,7 +124,7 @@ header .menu ul li a:hover {
 }
 body header .btn-mobile {
 	display: none;	
-	}
+}
 
 #banner {
 	height: 420px;
@@ -327,7 +327,7 @@ footer p {
 	}
 
 	#banner .textpng{
-		height: 250px;
+		height: 90%;
 	}
 
 	#cta {
@@ -386,35 +386,40 @@ footer p {
 }
 
 @media screen and (max-width: 992px) {
-    body header .menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background: #0B9EF5;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: right;
-        height: 280px;
-        opacity: 0.80;
-       /* visibility: hidden;
-        opacity: 0*/
-    }
-    body header .menu.active {
-        visibility: visible;
-        opacity: 1
-    }
-    body header .menu ul li {
-        display: block;
-        margin-right: 0;
-        margin-left: 0
-    }
-    body header .menu ul li a {
-        color: #fff;
-        padding: 22px;
-        font-size: 21px;
-        text-transform: uppercase
-    }
+	body header .menu {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		background: rgba(11,158,245,.9);
+		text-align: right;
+		height: 192px;
+		opacity: 0.80;
+		visibility: hidden;
+		opacity: 0;
+		transition: .4s all linear;
+	}
+	body header .menu.active {
+		visibility: visible;
+		opacity: 1
+	}
+	body header .menu ul {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	body header .menu ul li {
+		display: block;
+		margin-right: 0;
+		margin-left: 0
+	}
+	body header .menu ul li a {
+		color: #fff;
+		padding: 22px;
+		font-size: 21px;
+		text-transform: uppercase
+	}
 
 	body header .btn-mobile {
 		display: block;
@@ -460,15 +465,21 @@ footer p {
 	.container {
 		max-width: 90%;
 	}
+	#banner {
+		height: 192px;
+	}
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 768px) {
 	
 	#banner {
 		background: url('../img/banneriphone2.jpg') center center no-repeat;
 
 	}
-
+	#about .columns .col {
+		flex: auto;
+		width: 50%;
+	}
 	.cards .card {
 		width: 100%;
 		max-width: 300px;
@@ -482,5 +493,13 @@ footer p {
 	}
 	footer ul {
 		margin-top: 20px;
+	}
+
+}
+@media screen and (max-width: 580px) {
+	#about .columns .col {
+		flex: auto;
+		width: 100%;
+		margin:10px auto;
 	}
 }
